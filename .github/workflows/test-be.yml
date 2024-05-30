@@ -1,0 +1,24 @@
+name: Test build-essential
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    
+jobs:
+  build:
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, ubuntu-24.04]
+    runs-on: ${{ matrix.runs-on }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Testing build-essential
+        run: |
+          which make
+          dpkg -l build-essential
+        

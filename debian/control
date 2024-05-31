@@ -1,0 +1,15 @@
+Source: testpkg
+Section: misc
+Priority: optional
+Maintainer: Aptivi CEO <ceo@aptivi.anonaddy.com>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.4.0
+Homepage: https://aptivi.gitbook.io/kernel-simulator-manual
+Vcs-Browser: https://github.com/Aptivi/NitrocidKS
+Vcs-Git: https://github.com/Aptivi/NitrocidKS.git
+
+Package: testpkg
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Test package for build-essential checking
+ Dummy test package for build-essential checking

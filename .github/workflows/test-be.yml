@@ -21,4 +21,13 @@ jobs:
         run: |
           which make
           dpkg -l build-essential dpkg-dev g++ gcc make
-        
+      - name: Testing build-essential with Debian packaging
+        run: |
+          sudo apt install devscripts debhelper-compat dput
+          mv debian ..
+          mv .github ..
+          tar cfv ../testpkg_1.0.orig.tar .
+          xz ../testpkg_1.0.orig.tar
+          mv ../debian .
+          debuild -us -uc
+

@@ -20,5 +20,5 @@ jobs:
       - name: Testing build-essential
         run: |
           which make
-          dpkg -l build-essential
+          dpkg -l build-essential dpkg-dev g++ gcc make
         

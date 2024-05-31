@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/Aptivi/NitrocidKS.git
 
 Package: testpkg
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: Test package for build-essential checking
  Dummy test package for build-essential checking
